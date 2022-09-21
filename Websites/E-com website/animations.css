@@ -1,0 +1,52 @@
+#navbar li a:hover,
+#navbar li a.active,
+#navbar li i:hover {
+  -webkit-animation: blink-2 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite
+    both;
+  animation: blink-2 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
+  color: var(--secondary-shade);
+}
+
+#navbar li a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  width: 75%;
+  height: 2px;
+  background-color: var(--secondary-shade);
+}
+
+@-webkit-keyframes blink-2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink-2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#feature .feature-box:hover {
+  box-shadow: 10px 10px 54px rgb(70, 62, 221, 0.2);
+}
+
+#newsletter button:hover,
+#fly:hover {
+  transition: 0.3s;
+  background-color: var(--primary-accent);
+  color: black;
+}

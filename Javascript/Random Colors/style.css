@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;500;700&family=Nunito:wght@300;400;500;600&family=Oswald:wght@200;400&family=Sanchez&display=swap");
+
+/* --- GENERAL RULES --- */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  font-family: "Nunito", "sans-serif";
+}
+
+body {
+  min-width: 325px;
+  background-image: radial-gradient(red 50%, green 80%, blue 100%);
+}
+
+.diamond {
+  width: 100vw;
+  height: 100vh;
+}
+
+.gold {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#button {
+  width: 125px;
+  height: 60px;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  border: 1px solid black;
+  animation: 5s colour infinite;
+}
+
+@keyframes colour {
+  0% {
+    background-color: goldenrod;
+    color: white;
+  }
+
+  5% {
+    background-color: red;
+  }
+
+  10% {
+    background-color: blueviolet;
+    color: gray;
+  }
+
+  15% {
+    background-color: tomato;
+  }
+
+  20% {
+    background-color: olive;
+    color: black;
+  }
+
+  25% {
+    background-color: peru;
+  }
+
+  30% {
+    background-color: #1a1918a5;
+    color: gray;
+  }
+
+  35% {
+    background-color: darkred;
+  }
+
+  40% {
+    background-color: lavender;
+    color: white;
+  }
+
+  45% {
+    background-color: olivedrab;
+  }
+
+  50% {
+    background-color: black;
+    color: gray;
+  }
+
+  55% {
+    background-color: bisque;
+  }
+
+  60% {
+    background-color: oldlace;
+    color: black;
+  }
+
+  65% {
+    background-color: saddlebrown;
+  }
+
+  70% {
+    background-color: red;
+    color: gray;
+  }
+
+  75% {
+    background-color: blue;
+  }
+
+  80% {
+    background-color: orange;
+    color: white;
+  }
+
+  85% {
+    background-color: teal;
+  }
+
+  90% {
+    background-color: lawngreen;
+    color: gray;
+  }
+
+  95% {
+    background-color: thistle;
+  }
+
+  100% {
+    background-color: darkgoldenrod;
+    color: black;
+  }
+}
