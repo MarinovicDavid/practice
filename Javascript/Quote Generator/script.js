@@ -30,6 +30,10 @@ function quoteGenerator() {
 
 var quotes = [
   {
+    quote: "I refuse to believe in anything that takes away my power",
+    source: "Emory Andrew Tate"
+  },
+  {
     quote: "Be who you are and say what you feel, because those who mind don't matter and those who matter don't mind.",
     source: "Dr. Seuss"
   },
