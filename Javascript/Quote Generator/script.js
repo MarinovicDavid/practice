@@ -2,8 +2,10 @@ const button = document.getElementById('button')
 const quote = document.getElementById('quote')
 const author = document.getElementById('author')
 
+button.addEventListener('click', () => quoteGenerator())
 
-button.addEventListener('click', () => {
+
+function quoteGenerator() {
   var number = Math.floor(Math.random() * quotes.length)
   var randomQuote = quotes[number].quote
   var randomSource = quotes[number].source
@@ -23,7 +25,8 @@ button.addEventListener('click', () => {
   }
   quote.innerText = `"${randomQuote}"`
   author.innerText = `${randomSource + comma} ${randomCitation + comma2} ${randomYear + dot}`
-})
+}
+
 
 var quotes = [
   {
