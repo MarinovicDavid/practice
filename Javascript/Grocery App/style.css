@@ -36,7 +36,7 @@ input {
   height: 2rem;
   border-radius: 0.4rem;
   font-size: 1rem;
-  padding: 0;
+  padding: 8px;
   outline: none;
   border: 1px solid #00000080;
   transition: 0.15s;
@@ -60,28 +60,11 @@ button:hover {
   border: 2px solid #00000080;
 }
 
-#more,
-#less {
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-}
-
-#more {
-  right: 10%;
-}
-
-#less {
-  left: 10%;
-}
-
-#add:hover,
-#more:hover {
+#add:hover {
   background-color: #228b2280;
 }
 
-#clear:hover,
-#less:hover {
+#clear:hover {
   background-color: #ff450080;
 }
 
