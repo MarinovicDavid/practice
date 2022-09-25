@@ -21,17 +21,18 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 3em;
-  padding: 5%;
+  gap: 2.5em;
+  padding-top: 2.5%;
 }
 
 button {
   width: 100px;
   height: 100px;
   border-radius: 1.16em;
-  transition: all 0.18s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   cursor: pointer;
   background-size: cover;
+  box-shadow: 10px 10px 20px #00000080;
 }
 
 button:hover {
@@ -50,9 +51,45 @@ button:hover {
   background-image: url(/img/scissors.jpg);
 }
 
+.inactive {
+  width: 70.71px;
+  height: 70.71px;
+  border-radius: 0.8em;
+  opacity: 0.4;
+}
+
 .button-container {
   display: flex;
   gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#score {
+  margin-top: -1%;
+}
+
+#again {
+  width: 250px;
+  height: 25px;
+  border-radius: 0.5em;
+  box-shadow: 3px 6px 10px #00000080;
+  background-color: #e3e3e3;
+  border: 1px solid #00000080;
+}
+
+#again:hover {
+  transform: scale(1.05);
+  background-color: #e3e3e380;
+}
+
+span.player {
+  color: forestgreen;
+}
+
+span.enemy {
+  color: orangered;
 }
 
 h1 {
