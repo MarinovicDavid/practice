@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;500;700&family=Nunito:wght@300;400;500;600&family=Oswald:wght@200;400&family=Sanchez&display=swap");
+
+/* --- GENERAL RULES --- */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  font-family: "Nunito", "sans-serif";
+}
+
+body {
+  min-width: 325px;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #ffffff, #000000aa);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3em;
+  padding: 5%;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  border-radius: 1.16em;
+  transition: all 0.18s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  cursor: pointer;
+  background-size: cover;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+#rock {
+  background-image: url(/img/rock.jpg);
+}
+
+#paper {
+  background-image: url(/img/paper.jpg);
+}
+
+#scissors {
+  background-image: url(/img/scissors.jpg);
+}
+
+.button-container {
+  display: flex;
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
