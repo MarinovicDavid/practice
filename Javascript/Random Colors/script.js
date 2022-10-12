@@ -1,46 +1,33 @@
-const bg = document.querySelector('.container')
-const button = document.getElementById('button')
-const gold = document.querySelector('.gold')
-const diamond = document.querySelector('.diamond')
+button.addEventListener('click', () => {
+  let one = generateRandomColor()
+  let two = generateRandomColor()
+  let three = generateRandomColor()
+  let four = generateRandomColor()
+  let five = generateRandomColor()
+  let six = generateRandomColor()
+  let seven = generateRandomColor()
+  let eight = generateRandomColor()
+  let nine = generateRandomColor()
+  let ten = generateRandomColor()
+  let eleven = generateRandomColor()
+  let twelve = generateRandomColor()
 
-let chance
+  let randomColors = `${one} 0%, ${two} 25%, ${three} 37%,${four} 44%, ${five} 52%, ${six} 60%,${seven} 66%, ${eight} 72%, ${nine} 80%,${ten} 86%, ${eleven} 93%, ${twelve} 100%`
 
-button.addEventListener('mousedown', () => {
-  let one = Math.floor(Math.random() * 16777215).toString(16);
-  let two = Math.floor(Math.random() * 16777215).toString(16);
-  let three = Math.floor(Math.random() * 16777215).toString(16);
-  let four = Math.floor(Math.random() * 16777215).toString(16);
-  let five = Math.floor(Math.random() * 16777215).toString(16);
-  let six = Math.floor(Math.random() * 16777215).toString(16);
-  let seven = Math.floor(Math.random() * 16777215).toString(16);
-  let eight = Math.floor(Math.random() * 16777215).toString(16);
-  let nine = Math.floor(Math.random() * 16777215).toString(16);
-  let ten = Math.floor(Math.random() * 16777215).toString(16);
-  let eleven = Math.floor(Math.random() * 16777215).toString(16);
-  let twelve = Math.floor(Math.random() * 16777215).toString(16);
-
-  let random = `#${check(one)} 0%, #${check(two)} 25%, #${check(three)} 37%,#${check(four)} 44%, #${check(five)} 52%, #${check(six)} 60%,#${check(seven)} 66%, #${check(eight)} 72%, #${check(nine)} 80%,#${check(ten)} 86%, #${check(eleven)} 93%, #${check(twelve)} 100%`
-
-  bg.style.backgroundImage = `radial-gradient(${random})`
+  bg.style.backgroundImage = `radial-gradient(${randomColors})`
 })
 
-function check(num) {
-  if (num.length != 6) {
-    num = Math.floor(Math.random() * 16777215).toString(16);
-    console.log(`${num} Level 1`)
-    if (num.length != 6) {
-      num = Math.floor(Math.random() * 16777215).toString(16);
-      console.log(`${num} Level 2`)
-      if (num.length != 6) {
-        alert("0.2% chance!")
-        num = Math.floor(Math.random() * 16777215).toString(16);
-        console.log(`${num} Level 3`)
-        if (num.length != 6) {
-          alert("UNREAL! 0.0001% chance! Go to casino!")
-        }
-      }
-    }
-  }
+function generateRandomNumber(low, high) {
+  let random = Math.floor(Math.random() * (high - low + 1)) + low
+  return random
+}
 
-  return num
+function generateRandomColor() {
+  let characters = '0123456789ABCDEF'
+  let color = '#'
+
+  for (let i = 0; i < 6; i++) {
+    color += characters[generateRandomNumber(0, 15)]
+  }
+  return color
 }
